@@ -28,13 +28,15 @@
 				...Object.fromEntries(this.cols.map(function(a,b){return[`color${b+1}`,a]})),
 				tbShow: true, // lmfao
 				blocks: [
-					opcode: "newColor",
-					text: "color from [col]",
-					blockType: Scratch.BlockType.REPORTER,
-					arguments: {
-						col: {
-							type: Scratch.ArgumentType.COLOR,
-							defaultValue: this.cols[0]
+					{
+						opcode: "newColor",
+						text: "color from [col]",
+						blockType: Scratch.BlockType.REPORTER,
+						arguments: {
+							col: {
+								type: Scratch.ArgumentType.COLOR,
+								defaultValue: this.cols[0]
+							}
 						}
 					}
 				]
