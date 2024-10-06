@@ -89,7 +89,7 @@
 							},
 							v: {
 								type: Scratch.ArgumentType.NUMBER,
-								defaultValue: parseInt(cols[0].slice(1, 3), 16)
+								defaultValue: parseInt(this.cols[0].slice(1, 3), 16)
 							}
 						}
 					},
