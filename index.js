@@ -1,7 +1,7 @@
 // Rix-Ex. A revamp of RixxyX.
 // Available under GNU AGPLv3.
 
-(function() {
+(function(Scratch) { // will this fix sandboxing issues? idk.
 	var cols = []
 	class color {
 		constructor(r, g, b) {
@@ -213,4 +213,4 @@
 		}
 	}
 	Scratch.extensions.register(new RixEx())
-})()
+})(Scratch)
