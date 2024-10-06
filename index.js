@@ -96,7 +96,8 @@
 					"---",
 					{
 						opcode: "bool",
-						text: "[v]"
+						text: "[v]",
+						blockType: Scratch.BlockType.BOOLEAN,
 						arguments: {
 							v: {
 								type: Scratch.ArgumentType.STRING,
@@ -107,7 +108,8 @@
 					},
 					{
 						opcode: "bool",
-						text: "[v]"
+						text: "[v]",
+						blockType: Scratch.BlockType.BOOLEAN,
 						arguments: {
 							v: {
 								type: Scratch.ArgumentType.STRING,
