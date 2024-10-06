@@ -32,6 +32,7 @@
 			}
 		}
 		getInfo() {
+			console.log(parseInt(this.cols[0].slice(1, 3), 16))
 			return {
 				...this, // you can define anything on `this` to be returned by `getInfo`
 				cols: undefined, // no witnesses, chaps
@@ -123,7 +124,7 @@
 		}
 		newColor(args, util) {
 			var col = Scratch.Cast.toRgbColorObject(args.col)
-			console.log(col)
+			console.log(args.col)
 			col = Reflect.construct(color, Object.keys(col))
 			return col.id
 		}
@@ -131,6 +132,7 @@
 			return Object.prototype.toString.call(cols[Scratch.Cast.toNumber(args.rgb)] ?? false) != Object.prototype.toString.call(false)
 		}
 		rgbOfCol(args, util) {
+			console.log(args.rgb)
 			return (cols[Scratch.Cast.toNumber(args.rgb)] ?? Reflect.construct(color, Array(3).fill(0)))[Scratch.Cast.toString(args.rgb).toLowerCase()]
 		}
 		setRgbInColTo(args, util) {
