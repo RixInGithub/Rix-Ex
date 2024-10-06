@@ -124,6 +124,27 @@
 							}
 						}
 					}
+					"---",
+					{
+						opcode: "num",
+						text: "[v] to number",
+						blockType: Scratch.BlockType.REPORTER,
+						arguments: {
+							v: {
+								type: Scratch.ArgumentType.empty
+							}
+						}
+					},
+					{
+						opcode: "str",
+						text: "\"[v]\"",
+						blockType: Scratch.BlockType.REPORTER,
+						arguments: {
+							v: {
+								type: Scratch.ArgumentType.empty
+							}
+						}
+					}
 				]
 			}
 		}
@@ -151,6 +172,12 @@
 		}
 		bool(args) {
 			return JSON.parse(args.v)
+		}
+		num(args) {
+			return Scratch.Cast.toNumber(args.v)
+		}
+		str(args) {
+			return Scratch.Cast.toString(args.v)
 		}
 	}
 	Scratch.extensions.register(new RixEx())
