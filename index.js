@@ -44,4 +44,5 @@
 			return new color(0, 0, 0)
 		}
 	}
+	Scratch.extensions.register(new RixEx())
 })()
