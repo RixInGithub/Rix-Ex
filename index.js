@@ -123,7 +123,7 @@
 								defaultValue: "false"
 							}
 						}
-					}
+					},
 					"---",
 					{
 						opcode: "num",
