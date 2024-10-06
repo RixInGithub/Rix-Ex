@@ -47,11 +47,6 @@
 				// tbShow: true, // lmfao
 				blocks: [
 					{
-						blockType: Scratch.BlockType.LABEL,
-						text: "Colors"
-					},
-					"---",
-					{
 						opcode: "newColor",
 						text: "color ID from [col]",
 						blockType: Scratch.BlockType.REPORTER,
@@ -115,7 +110,6 @@
 						blockType: Scratch.BlockType.LABEL,
 						text: "Booleans"
 					},
-					"---",
 					{
 						opcode: "bool",
 						text: "[v]",
@@ -144,7 +138,6 @@
 						blockType: Scratch.BlockType.LABEL,
 						text: "JavaScript types"
 					},
-					"---",
 					{
 						opcode: "num",
 						text: "[v] to number",
@@ -193,7 +186,6 @@
 						blockType: Scratch.BlockType.LABEL,
 						text: "Network"
 					},
-					"---",
 					{
 						opcode: "startFetch",
 						text: "start[img1][img2]request to[url]",
