@@ -9,7 +9,8 @@
 			this.g = Number(g)
 			this.b = Number(b)
 			this.rgb = [...arguments]
-			this.id = cols.push(this)
+			this.id = cols.length
+			cols.push(this)
 		}
 		toString() {
 			return `rgb(${this.rgb.join(", ")})`
