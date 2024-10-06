@@ -200,7 +200,7 @@
 						arguments: {
 							img: {
 								type: Scratch.ArgumentType.IMAGE,
-								dataURI: "https://rixingithub.github.io/Rix-Ex/fetchCode.png"
+								dataURI: "https://raw.githubusercontent.com/RixInGithub/Rix-Ex/main/fetchCode.png"
 							},
 							url: {
 								type: Scratch.ArgumentType.STRING,
