@@ -106,10 +106,7 @@
 							}
 						}
 					},
-					{
-						blockType: Scratch.BlockType.LABEL,
-						text: "Booleans"
-					},
+					"---",
 					{
 						opcode: "bool",
 						text: "[v]",
@@ -135,10 +132,6 @@
 						}
 					},
 					{
-						blockType: Scratch.BlockType.LABEL,
-						text: "JavaScript types"
-					},
-					{
 						opcode: "num",
 						text: "[v] to number",
 						blockType: Scratch.BlockType.REPORTER,
@@ -154,7 +147,8 @@
 						blockType: Scratch.BlockType.REPORTER,
 						arguments: {
 							v: {
-								type: Scratch.ArgumentType.empty
+								type: Scratch.ArgumentType.empty,
+								defaultValue: ""
 							}
 						}
 					},
@@ -182,10 +176,7 @@
 							}
 						}
 					},
-					{
-						blockType: Scratch.BlockType.LABEL,
-						text: "Network"
-					},
+					"---",
 					{
 						opcode: "fetchOut",
 						text: "[img1][img2]URL[url]",
@@ -204,7 +195,8 @@
 								defaultValue: "https://scratch.mit.edu"
 							}
 						}
-					}
+					},
+					
 				]
 			}
 		}
