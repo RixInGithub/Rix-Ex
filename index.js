@@ -187,14 +187,13 @@
 						text: "Network"
 					},
 					{
-						opcode: "startFetch",
-						text: "start[img1][img2]request to[url]",
+						opcode: "fetchOut",
+						text: "[img1][img2]URL[url]",
 						blockType: Scratch.BlockType.REPORTER,
 						arguments: {
 							img1: {
 								type: Scratch.ArgumentType.IMAGE,
-								dataURI: "https://raw.githubusercontent.com/RixInGithub/Rix-Ex/main/fetchCode1.png",
-								space: false
+								dataURI: "https://raw.githubusercontent.com/RixInGithub/Rix-Ex/main/fetchCode1.png"
 							},
 							img2: {
 								type: Scratch.ArgumentType.IMAGE,
@@ -216,7 +215,6 @@
 			return col.id
 		}
 		colorEx(args, util) {
-			console.log(cols[Scratch.Cast.toNumber(args.col)])
 			return Object.prototype.toString.call(cols[Scratch.Cast.toNumber(args.col)] ?? false) != Object.prototype.toString.call(false)
 		}
 		resetCols() {
@@ -243,7 +241,9 @@
 		null(args) {
 			return {"null": null}[args.v] // "undefined" will return undefined
 		}
-		startFetch(args) {return true}
+		async fetchOut(args) {
+			return await (await fetch(`https://rix-ex-proxy.vercel.app/api/proxy?url=${encodeURIComponent(Scratch.Cast.toString(args.url))}`)).text()
+		}
 	}
 	Scratch.extensions.register(new RixEx())
 })(Scratch)
