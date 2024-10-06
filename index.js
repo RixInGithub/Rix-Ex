@@ -196,7 +196,8 @@
 					"---",
 					{
 						opcode: "startFetch",
-						text: "start [img1][img2] request to [url]",
+						text: "start[img1][img2]request to[url]",
+						blockType: Scratch.BlockType.REPORTER,
 						arguments: {
 							img1: {
 								type: Scratch.ArgumentType.IMAGE,
