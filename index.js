@@ -153,7 +153,7 @@
 					{
 						opcode: "null",
 						text: "[v]",
-						blockType: Scratch.BlockType.BOOLEAN,
+						blockType: Scratch.BlockType.REPORTER,
 						arguments: {
 							v: {
 								type: Scratch.ArgumentType.STRING,
@@ -165,7 +165,7 @@
 					{
 						opcode: "null",
 						text: "[v]",
-						blockType: Scratch.BlockType.BOOLEAN,
+						blockType: Scratch.BlockType.REPORTER,
 						arguments: {
 							v: {
 								type: Scratch.ArgumentType.STRING,
