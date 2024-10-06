@@ -27,7 +27,7 @@
 				},
 				tf: {
 					acceptReporters: false,
-					items: [true, false]
+					items: ["true", "false"]
 				}
 			}
 		}
@@ -102,7 +102,7 @@
 							v: {
 								type: Scratch.ArgumentType.STRING,
 								menu: "tf",
-								defaultValue: true
+								defaultValue: "true"
 							}
 						}
 					},
@@ -114,7 +114,7 @@
 							v: {
 								type: Scratch.ArgumentType.STRING,
 								menu: "tf",
-								defaultValue: false
+								defaultValue: "false"
 							}
 						}
 					}
