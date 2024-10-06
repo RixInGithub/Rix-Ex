@@ -18,7 +18,7 @@
 		constructor() {
 			this.name = "Rix-Ex"
 			this.id = "RixEx"
-			this.cols = ["#0f3", "#00801a", "#00801a"]
+			this.cols = ["#00ff33", "#00801a", "#00801a"]
 			this.menus = {}
 		}
 		getInfo() {
