@@ -18,6 +18,9 @@
 	}
 	class RixEx {
 		constructor() {
+			setInterval(function() {
+				
+			})
 			this.name = "Rix-Ex"
 			this.id = "RixEx"
 			this.cols = ["#00ff33", "#00801a", "#00801a"]
@@ -41,8 +44,13 @@
 				...this, // you can define anything on `this` to be returned by `getInfo`
 				cols: undefined, // no witnesses, chaps
 				...Object.fromEntries(this.cols.map(function(a,b){return[`color${b+1}`,a]})),
-				tbShow: true, // lmfao
+				// tbShow: true, // lmfao
 				blocks: [
+					{
+						blockType: Scratch.BlockType.LABEL,
+						text: "Colors"
+					},
+					"---",
 					{
 						opcode: "newColor",
 						text: "color ID from [col]",
@@ -103,6 +111,10 @@
 							}
 						}
 					},
+					{
+						blockType: Scratch.BlockType.LABEL,
+						text: "Booleans"
+					},
 					"---",
 					{
 						opcode: "bool",
@@ -128,6 +140,10 @@
 							}
 						}
 					},
+					{
+						blockType: Scratch.BlockType.LABEL,
+						text: "JavaScript types"
+					},
 					"---",
 					{
 						opcode: "num",
@@ -149,7 +165,6 @@
 							}
 						}
 					},
-					"---",
 					{
 						opcode: "null",
 						text: "[v]",
@@ -171,6 +186,25 @@
 								type: Scratch.ArgumentType.STRING,
 								menu: "const",
 								defaultValue: "null"
+							}
+						}
+					},
+					{
+						blockType: Scratch.BlockType.LABEL,
+						text: "Network"
+					},
+					"---",
+					{
+						opcode: "startFetch",
+						text: "start [img] request to [url]",
+						arguments: {
+							img: {
+								type: Scratch.ArgumentType.IMAGE,
+								dataURI: "https://rixingithub.github.io/Rix-Ex/fetchCode.png"
+							},
+							url: {
+								type: Scratch.ArgumentType.STRING,
+								defaultValue: "https://scratch.mit.edu"
 							}
 						}
 					}
@@ -211,6 +245,7 @@
 		null(args) {
 			return {"null": null}[args.v] // "undefined" will return undefined
 		}
+		startFetch(args) {return true}
 	}
 	Scratch.extensions.register(new RixEx())
 })(Scratch)
