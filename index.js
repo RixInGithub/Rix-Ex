@@ -135,7 +135,7 @@
 			var k = Scratch.Cast.toString(args.rgb).toLowerCase()
 			var v = Scratch.Cast.toNumber(args.v)
 			c[k] = v
-		},
+		}
 		bool(args) {
 			return JSON.parse(args.v)
 		}
