@@ -23,7 +23,7 @@
 			})
 			this.name = "Rix-Ex"
 			this.id = "RixEx"
-			this.cols = ["#00ff33", "#00ff33", "#00801a"]
+			this.cols = ["#00ff33", undefined, "#00801a"]
 			this.menus = {
 				rgb: {
 					acceptReporters: true,
@@ -193,7 +193,8 @@
 						arguments: {
 							img1: {
 								type: Scratch.ArgumentType.IMAGE,
-								dataURI: "https://raw.githubusercontent.com/RixInGithub/Rix-Ex/main/fetchCode1.png"
+								dataURI: "https://raw.githubusercontent.com/RixInGithub/Rix-Ex/main/fetchCode1.png",
+								space: false
 							},
 							img2: {
 								type: Scratch.ArgumentType.IMAGE,
