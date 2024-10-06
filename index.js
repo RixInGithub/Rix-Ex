@@ -134,14 +134,13 @@
 			return col.id
 		}
 		colorEx(args, util) {
-			return Object.prototype.toString.call(cols[Scratch.Cast.toNumber(args.rgb)] ?? false) != Object.prototype.toString.call(false)
+			return Object.prototype.toString.call(cols[Scratch.Cast.toNumber(args.col)] ?? false) != Object.prototype.toString.call(false)
 		}
 		resetCols() {
 			cols = []
 		}
 		rgbOfCol(args, util) {
-			console.log(args.rgb)
-			return (cols[Scratch.Cast.toNumber(args.rgb)] ?? Reflect.construct(color, Array(3).fill(0)))[Scratch.Cast.toString(args.rgb).toLowerCase()]
+			return (cols[Scratch.Cast.toNumber(args.col)] ?? Reflect.construct(color, Array(3).fill(0)))[Scratch.Cast.toString(args.rgb).toLowerCase()]
 		}
 		setRgbInColTo(args, util) {
 			var c = cols[Scratch.Cast.toNumber(args.rgb)] ?? Reflect.construct(color, Array(3).fill(0))
