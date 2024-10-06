@@ -29,6 +29,10 @@
 				tf: {
 					acceptReporters: false,
 					items: ["true", "false"]
+				},
+				"const": {
+					acceptReporters: false,
+					items: ["null", "undefined"]
 				}
 			}
 		}
@@ -144,6 +148,31 @@
 								type: Scratch.ArgumentType.empty
 							}
 						}
+					},
+					"---",
+					{
+						opcode: "null",
+						text: "[v]",
+						blockType: Scratch.BlockType.BOOLEAN,
+						arguments: {
+							v: {
+								type: Scratch.ArgumentType.STRING,
+								menu: "const",
+								defaultValue: "undefined"
+							}
+						}
+					},
+					{
+						opcode: "null",
+						text: "[v]",
+						blockType: Scratch.BlockType.BOOLEAN,
+						arguments: {
+							v: {
+								type: Scratch.ArgumentType.STRING,
+								menu: "const",
+								defaultValue: "null"
+							}
+						}
 					}
 				]
 			}
@@ -178,6 +207,9 @@
 		}
 		str(args) {
 			return Scratch.Cast.toString(args.v)
+		}
+		null(args) {
+			return {"null": null}[args.v] // "undefined" will return undefined
 		}
 	}
 	Scratch.extensions.register(new RixEx())
