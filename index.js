@@ -122,8 +122,10 @@
 			}
 		}
 		newColor(args, util) {
-			args.col = Scratch.Cast.toRgbColorObject(args.col)
-			return Reflect.construct(color, Object.keys(args.col)).id
+			var col = Scratch.Cast.toRgbColorObject(args.col)
+			console.log(col)
+			col = Reflect.construct(color, Object.keys(col))
+			return col.id
 		}
 		colorEx(args, util) {
 			return Object.prototype.toString.call(cols[Scratch.Cast.toNumber(args.rgb)] ?? false) != Object.prototype.toString.call(false)
