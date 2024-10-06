@@ -134,6 +134,7 @@
 			return col.id
 		}
 		colorEx(args, util) {
+			console.log(cols[Scratch.Cast.toNumber(args.col)])
 			return Object.prototype.toString.call(cols[Scratch.Cast.toNumber(args.col)] ?? false) != Object.prototype.toString.call(false)
 		}
 		resetCols() {
