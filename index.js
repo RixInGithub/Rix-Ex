@@ -242,7 +242,9 @@
 			return {"null": null}[args.v] // "undefined" will return undefined
 		}
 		async fetchOut(args) {
-			return await (await fetch(`https://rix-ex-proxy.vercel.app/api/proxy/?url=${encodeURIComponent(Scratch.Cast.toString(args.url))}`)).text()
+			var u = Scratch.Cast.toString(args.url)
+			// u = `https://rix-ex-proxy.vercel.app/api/proxy/?url=${encodeURIComponent(u)}`
+			return await (await fetch(u)).text()
 		}
 	}
 	Scratch.extensions.register(new RixEx())
