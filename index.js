@@ -196,11 +196,15 @@
 					"---",
 					{
 						opcode: "startFetch",
-						text: "start [img] request to [url]",
+						text: "start [img1][img2] request to [url]",
 						arguments: {
-							img: {
+							img1: {
 								type: Scratch.ArgumentType.IMAGE,
-								dataURI: "https://raw.githubusercontent.com/RixInGithub/Rix-Ex/main/fetchCode.png"
+								dataURI: "https://raw.githubusercontent.com/RixInGithub/Rix-Ex/main/fetchCode1.png"
+							},
+							img2: {
+								type: Scratch.ArgumentType.IMAGE,
+								dataURI: "https://raw.githubusercontent.com/RixInGithub/Rix-Ex/main/fetchCode2.png"
 							},
 							url: {
 								type: Scratch.ArgumentType.STRING,
