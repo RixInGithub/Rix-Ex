@@ -32,7 +32,6 @@
 			}
 		}
 		getInfo() {
-			console.log(parseInt(this.cols[0].slice(1, 3), 16))
 			return {
 				...this, // you can define anything on `this` to be returned by `getInfo`
 				cols: undefined, // no witnesses, chaps
@@ -59,6 +58,11 @@
 								type: Scratch.ArgumentType.NUMBER
 							}
 						}
+					},
+					{
+						opcode: "resetCols",
+						text: "reset color IDs",
+						blockType: Scratch.BlockType.COMMAND
 					},
 					{
 						opcode: "rgbOfCol",
@@ -123,12 +127,16 @@
 			}
 		}
 		newColor(args, util) {
+			console.log(args, util)
 			var col = Scratch.Cast.toRgbColorList(args.col)
 			col = Reflect.construct(color, col)
 			return col.id
 		}
 		colorEx(args, util) {
 			return Object.prototype.toString.call(cols[Scratch.Cast.toNumber(args.rgb)] ?? false) != Object.prototype.toString.call(false)
+		}
+		resetCols() {
+			cols = []
 		}
 		rgbOfCol(args, util) {
 			console.log(args.rgb)
